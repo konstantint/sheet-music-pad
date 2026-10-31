@@ -609,7 +609,7 @@ export default function App() {
       )}
       {drag.chip && (
         <div className={`drag-chip${drag.chip.deleting ? ' deleting' : ''}`} style={{ left: drag.chip.x, top: drag.chip.y }}>
-          {drag.chip.deleting ? '🗑 Release to delete' : drag.dragging?.kind === 'palette' ? 'Drop on the staff' : ''}
+          {drag.chip.deleting ? '✕ Release to delete' : drag.dragging?.kind === 'palette' ? 'Drop on the staff' : ''}
         </div>
       )}
     </div>

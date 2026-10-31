@@ -1,7 +1,23 @@
 import type { MidiAccessState, MidiPortInfo } from '../audio/useAudio';
 import type { PianoStatus } from '../audio/outputs';
 import type { PlayState } from '../audio/player';
+import { G, MUSIC_FONT } from '../layout/glyphs';
 import type { ClefType, Composition, TimeSignature } from '../model/types';
+
+/**
+ * A Bravura glyph drawn as inline SVG. System fonts often lack the Unicode musical
+ * symbols block (U+1D100), so UI symbols use the bundled music font instead.
+ * `baseline` is the y of the glyph origin within the box, in px.
+ */
+function MusicIcon({ ch, size, width, height, baseline }: { ch: string; size: number; width: number; height: number; baseline: number }) {
+  return (
+    <svg className="music-icon" width={width} height={height} viewBox={`0 0 ${width} ${height}`} aria-hidden="true">
+      <text x={width / 2} y={baseline} fontFamily={MUSIC_FONT} fontSize={size} textAnchor="middle" fill="currentColor">
+        {ch}
+      </text>
+    </svg>
+  );
+}
 
 interface HeaderProps {
   title: string;
@@ -20,7 +36,7 @@ export function Header(p: HeaderProps) {
   return (
     <header className="header">
       <div className="brand" aria-hidden="true">
-        𝄞
+        <MusicIcon ch={G.gClef} size={20} width={16} height={36} baseline={22} />
       </div>
       <input className="title-input" aria-label="Title" value={p.title} onChange={(e) => p.onTitle(e.target.value)} spellCheck={false} />
       <div className="spacer" />
@@ -110,18 +126,20 @@ export function SettingsBar(p: SettingsProps) {
         <button
           className="sym"
           aria-pressed={ts.symbol === 'common'}
+          aria-label="Common time"
           title="Common time (4/4)"
           onClick={() => p.onTime(ts.symbol === 'common' ? { beats: 4, beatType: 4 } : { beats: 4, beatType: 4, symbol: 'common' })}
         >
-          𝄴
+          <MusicIcon ch={G.timeSigCommon} size={24} width={14} height={18} baseline={9} />
         </button>
         <button
           className="sym"
           aria-pressed={ts.symbol === 'cut'}
+          aria-label="Cut time"
           title="Cut time (2/2)"
           onClick={() => p.onTime(ts.symbol === 'cut' ? { beats: 2, beatType: 2 } : { beats: 2, beatType: 2, symbol: 'cut' })}
         >
-          𝄵
+          <MusicIcon ch={G.timeSigCut} size={24} width={14} height={22} baseline={11} />
         </button>
       </span>
       <label>

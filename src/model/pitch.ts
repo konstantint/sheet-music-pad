@@ -64,7 +64,8 @@ export function keySignaturePositions(fifths: number, clef: ClefType): number[] 
   return (fifths > 0 ? trebleSharps : trebleFlats).slice(0, n).map((p) => p + shift);
 }
 
-const ACC_LABEL: Record<number, string> = { [-2]: '𝄫', [-1]: '♭', 0: '♮', 1: '♯', 2: '𝄪' };
+// Double accidentals spelled with two symbols: 𝄫/𝄪 (U+1D12B/A) are missing from many system fonts.
+const ACC_LABEL: Record<number, string> = { [-2]: '♭♭', [-1]: '♭', 0: '♮', 1: '♯', 2: '♯♯' };
 
 export function pitchLabel(p: Pitch, alter: Alter | null = null): string {
   return `${p.step}${alter === null ? '' : ACC_LABEL[alter]}${p.octave}`;
