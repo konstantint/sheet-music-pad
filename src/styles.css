@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Bravura';
-  src: url('/fonts/Bravura.woff2') format('woff2');
+  src: url('./assets/Bravura.woff2') format('woff2');
   font-display: block;
 }
 

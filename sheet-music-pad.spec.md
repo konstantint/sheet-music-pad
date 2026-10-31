@@ -28,7 +28,7 @@ Sheet Music Pad is a single-page React web app for writing down short pieces of 
 |---|---|---|
 | TC-1 | React 18+ with TypeScript (strict mode), built with Vite. The output is a static one-page bundle with no server-side code. | MUST |
 | TC-2 | Notation is drawn **by the app itself as SVG** inside React components. Do not use VexFlow, OSMD, abcjs or any other notation renderer: the drag interaction needs exact control over geometry and hit testing. | MUST |
-| TC-3 | Music glyphs come from the **Bravura** SMuFL font (SIL OFL), bundled as a local `woff2` under `public/fonts/` and drawn as SVG `<text>`. Staff lines, stems, ledger lines, bar lines and beams are SVG `<line>`/`<rect>`/`<path>`. | SHOULD |
+| TC-3 | Music glyphs come from the **Bravura** SMuFL font (SIL OFL), bundled as a local `woff2` under `src/assets/` and drawn as SVG `<text>`. Staff lines, stems, ledger lines, bar lines and beams are SVG `<line>`/`<rect>`/`<path>`. | SHOULD |
 | TC-4 | State is managed with `useReducer` (or Zustand) around a **pure, serializable** composition model. All edits are pure functions `(composition, action) → composition`, so undo/redo and tests are simple. | MUST |
 | TC-5 | Audio: built-in piano through the Web Audio API using a sampled grand piano (recommended: the `smplr` package, `SplendidGrandPiano` or `Soundfont` "acoustic_grand_piano"). External output through the **Web MIDI API**. | MUST |
 | TC-6 | JSON import is validated with a runtime schema (recommended: `zod`). | MUST |
@@ -366,7 +366,7 @@ src/
   io/
     exportJson.ts, importJson.ts
   styles/
-public/fonts/Bravura.woff2
+src/assets/Bravura.woff2
 ```
 
 Design rules:

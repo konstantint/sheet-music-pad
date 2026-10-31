@@ -17,6 +17,8 @@ npm run e2e        # end-to-end smoke test in headless Chromium (needs `npm run 
 npm run lint       # TypeScript strict check
 ```
 
+Deploying to GitHub Pages: `make deploy` installs, builds and publishes `dist/` to the `gh-pages` branch (via the `gh-pages` package). The build uses a relative base, so it works from `https://<user>.github.io/sheet-music-pad/`. `make clean` removes `dist/` and `node_modules/`.
+
 ## Using it
 
 **Placing notes**
@@ -66,7 +68,7 @@ src/model/        types, pitch & clef math, durations, measures/accidentals, pur
 src/layout/       pure layout: line breaking, spacing, chord geometry (seconds, accidental stacking, ledger lines)
 src/interaction/  hit testing (chord column vs gap), drop commit logic, pointer gesture hook
 src/audio/        timeline (ties/accidentals resolved), look-ahead scheduler, piano / Web MIDI / synth outputs
-src/components/   React UI; score/ is the SVG renderer (Bravura SMuFL font in public/fonts)
+src/components/   React UI; score/ is the SVG renderer (Bravura SMuFL font in src/assets)
 src/state/        undo/redo reducer, localStorage persistence
 tests/            Vitest unit tests      e2e/smoke.mjs   Playwright end-to-end checks of the acceptance scenarios
 ```
@@ -79,3 +81,7 @@ tests/            Vitest unit tests      e2e/smoke.mjs   Playwright end-to-end c
 - Moving a note up or down **keeps its written accidental** (dragging A♭4 up two steps gives C♭5).
 - **Not implemented yet** (all marked COULD in the spec): beaming (eighths and shorter use flags), copy/paste, switching a selected event between rest and note, MIDI/MusicXML export, metronome/count-in, a generated JSON Schema file, and an automatic final bar line.
 - The e2e suite is a plain Playwright script (`e2e/smoke.mjs`), not `@playwright/test`. It covers AC-1…AC-10 and AC-12…AC-15. AC-11 (Web MIDI output) was not tested automatically.
+
+## License
+
+MIT, see [LICENSE](LICENSE). The bundled Bravura font is © Steinberg Media Technologies GmbH, under the SIL Open Font License.
