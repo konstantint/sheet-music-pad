@@ -1,0 +1,330 @@
+{
+  "format": "sheet-music-pad",
+  "version": 1,
+  "composition": {
+    "title": "Ode to Joy (excerpt)",
+    "tempo": 108,
+    "clef": "treble",
+    "timeSignature": {
+      "beats": 4,
+      "beatType": 4
+    },
+    "keySignature": 0,
+    "events": [
+      {
+        "id": "e1",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n1",
+            "step": "C",
+            "octave": 4,
+            "alter": null
+          },
+          {
+            "id": "n2",
+            "step": "E",
+            "octave": 4,
+            "alter": null
+          },
+          {
+            "id": "n3",
+            "step": "G",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e2",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n4",
+            "step": "E",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e3",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n5",
+            "step": "F",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e4",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n6",
+            "step": "G",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e5",
+        "type": "barline",
+        "style": "single"
+      },
+      {
+        "id": "e6",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n7",
+            "step": "B",
+            "octave": 3,
+            "alter": null
+          },
+          {
+            "id": "n8",
+            "step": "D",
+            "octave": 4,
+            "alter": null
+          },
+          {
+            "id": "n9",
+            "step": "G",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e7",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n10",
+            "step": "F",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e8",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n11",
+            "step": "E",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e9",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n12",
+            "step": "D",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e10",
+        "type": "barline",
+        "style": "single"
+      },
+      {
+        "id": "e11",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n13",
+            "step": "A",
+            "octave": 3,
+            "alter": null
+          },
+          {
+            "id": "n14",
+            "step": "C",
+            "octave": 4,
+            "alter": null
+          },
+          {
+            "id": "n15",
+            "step": "E",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e12",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n16",
+            "step": "C",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e13",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n17",
+            "step": "D",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e14",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n18",
+            "step": "E",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e15",
+        "type": "barline",
+        "style": "single"
+      },
+      {
+        "id": "e16",
+        "type": "chord",
+        "duration": {
+          "base": "quarter",
+          "dots": 1
+        },
+        "notes": [
+          {
+            "id": "n19",
+            "step": "G",
+            "octave": 3,
+            "alter": null
+          },
+          {
+            "id": "n20",
+            "step": "B",
+            "octave": 3,
+            "alter": null
+          },
+          {
+            "id": "n21",
+            "step": "D",
+            "octave": 4,
+            "alter": null
+          },
+          {
+            "id": "n22",
+            "step": "E",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e17",
+        "type": "chord",
+        "duration": {
+          "base": "eighth",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n23",
+            "step": "D",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e18",
+        "type": "chord",
+        "duration": {
+          "base": "half",
+          "dots": 0
+        },
+        "notes": [
+          {
+            "id": "n24",
+            "step": "D",
+            "octave": 4,
+            "alter": null
+          }
+        ]
+      },
+      {
+        "id": "e19",
+        "type": "barline",
+        "style": "final"
+      }
+    ]
+  }
+}
